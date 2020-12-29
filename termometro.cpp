@@ -109,20 +109,14 @@ float Termometro::kel2Fahr(int valor)
 
 void Termometro::dialPresionado()
 {
-    if(ui->dialC->hasFocus()){
-        ui->dialF->setCursor(Qt::ClosedHandCursor);
-    }else if(ui->dialF->hasFocus()){
-        ui->dialK->setCursor(Qt::ClosedHandCursor);
-    }
+    ui->dialC->setCursor(Qt::ClosedHandCursor);
+    ui->dialF->setCursor(Qt::ClosedHandCursor);
+    ui->dialK->setCursor(Qt::ClosedHandCursor);
 }
 
 void Termometro::dialRelajado()
 {
-    if(ui->dialC->hasFocus()){
-        ui->dialF   ->setCursor(Qt::OpenHandCursor);
-    }else if(ui->dialF->hasFocus()){
-        ui->dialK->setCursor(Qt::OpenHandCursor);
-    }
-
+    ui->dialC->setCursor(Qt::OpenHandCursor);
+    ui->dialF->setCursor(Qt::OpenHandCursor);
+    ui->dialK->setCursor(Qt::OpenHandCursor);
 }
-
